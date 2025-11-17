@@ -1,0 +1,58 @@
+# Node modules
+node_modules/
+
+# Environment files (sensitive)
+.env
+.env.local
+.env.*.local
+
+# Next.js build output
+.next/
+out/
+
+# Production build
+dist/
+build/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor directories and files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Testing and coverage
+.nyc_output/
+coverage/
+
+# Cache
+.cache/
+.parcel-cache/
+/.pnp
+.pnp.js
+
+# Vercel / deployment
+.vercel/
+
+# Storybook
+storybook-static/
+
+# Turborepo / tooling
+.turbo/
+.turbopack/
+
+# Misc
+*.tgz
