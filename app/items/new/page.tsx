@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 
+// client page for creating a new item
 export default function NewItemPage() {
   const router = useRouter();
   const [description, setDescription] = useState('');

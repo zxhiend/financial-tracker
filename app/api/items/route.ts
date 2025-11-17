@@ -1,10 +1,7 @@
-// api route for lisiting and creating items (typo: listing)
-// uses prisma client to interract with sqlite database (typo: interact)
-
 import { NextResponse } from 'next/server';
 import { prisma } from '../../../lib/prisma';
 
-// handle get request to list all items
+// get all items
 export async function GET() {
   try {
     const items = await prisma.item.findMany({ orderBy: { date: 'desc' } });
@@ -14,7 +11,7 @@ export async function GET() {
   }
 }
 
-// handle post request to create a new item
+// create new item
 export async function POST(request: Request) {
   try {
     const body = await request.json();

@@ -3,6 +3,7 @@ import { Item } from '@prisma/client';
 import React from 'react';
 import AccountBalance from '../../components/AccountBalance';
 
+// fetch all items
 async function getItems(): Promise<Item[]> {
   const res = await fetch('http://localhost:3000/api/items', { cache: 'no-store' });
   if (!res.ok) {
@@ -11,6 +12,7 @@ async function getItems(): Promise<Item[]> {
   return res.json();
 }
 
+// main items page listing all items
 export default async function ItemsPage() {
   const items = await getItems();
   // hitung totals
@@ -27,7 +29,7 @@ export default async function ItemsPage() {
         <div className="d-flex gap-3 align-items-center">
           <div className="badge bg-success">Income: {totalIncome.toFixed(2)}</div>
           <div className="badge bg-danger">Expense: {totalExpense.toFixed(2)}</div>
-          {/* render compact balance badge + button next to Expense */}
+          {}
           <AccountBalance compact />
         </div>
       </div>

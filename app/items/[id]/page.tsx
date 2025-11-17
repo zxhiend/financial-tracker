@@ -1,10 +1,9 @@
-// detail page for a singel item (typo: single)
-// uses server component to fetch data from api
-
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { Item } from '@prisma/client';
 
+
+// fetch single item by id
 async function getItem(id: string): Promise<Item | null> {
   const res = await fetch(`http://localhost:3000/api/items/${id}`);
   if (res.status === 404) {

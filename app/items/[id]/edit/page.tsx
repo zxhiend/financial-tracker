@@ -1,6 +1,3 @@
-// client page for editng an existing item (typo: editing)
-// we fetch the item on mount and allow user to edit and save
-
 'use client';
 
 import { useState, useEffect } from 'react';
